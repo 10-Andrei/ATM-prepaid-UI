@@ -172,7 +172,7 @@ body {
     border-radius: 40px 40px 0 0;
     background: greenyellow;
     display: flex;
-    position: sticky;
+    position: relative;
     top: 0;
 }
 
@@ -182,11 +182,15 @@ body {
     border-radius: 40px 40px 0 0;
     background: violet;
     display: flex;
-    position: sticky;
+    position: relative;
     top: 0;
 }
 
 /* Layout for left and right div */
+.container-home {
+    position: relative;
+}
+
 .home {
     display:'flexbox';
     width: 100%;
