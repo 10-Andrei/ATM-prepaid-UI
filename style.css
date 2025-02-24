@@ -356,3 +356,9 @@ body {
     font-family: "AvenirLight";
     align-items: center;
 }
+
+/* Footer */
+.footer {
+    background-color: #008cff;
+    z-index: 1;
+}

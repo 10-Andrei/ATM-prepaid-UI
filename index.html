@@ -1,24 +1,44 @@
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
     <!-- Navbar -->
     <header class="header">
         <nav class="navbar">
             <img src="assets/ATM Prepaid Logo.png" class="nav-logo">
+
             <ul class="nav-menu">
-                <li class="nav-item" ><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item">
+                    <a href="#Home" class="nav-link" onclick="changeTitle('Home | ATM Prepaid')">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#About" class="nav-link" onclick="changeTitle('About Us | ATM Prepaid')">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Products" class="nav-link" onclick="changeTitle('Our Services | ATM Prepaid')">Our Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Clients" class="nav-link" onclick="changeTitle('Our Services | ATM Prepaid')">Our Clients</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Contact" class="nav-link" onclick="changeTitle('Contact Us | ATM Prepaid')">Contact</a>
+                </li>
+
+                <!-- <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Our Products</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Our Clients</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li> -->
                 <!-- Close button -->
-                <li class="nav-item close-btn"><a href="#">×</a></li> 
+                <li class="nav-item close-btn"><a href="#">×</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span class="bar"></span>
@@ -26,111 +46,114 @@
                 <span class="bar"></span>
             </div>
         </nav>
-        
+
     </header>
 
-<!--Main-->
+    <!--Main-->
 
-     <!--Home-->
-    <div class="home">
+    <!--Home-->
+    <div id="Home" class="home">
         <div class="left-div-home">
 
             <h1 class="home-title"><b>ATM Prepaid Solutions</b></h1>
             <h2 class="home-desc">Your Gateway to Seamless E-load<br>and Reliable Prepaid Services</h2>
             <button class="home-button">Be a Partner</button>
-            </div>
-           
-        
-
         </div>
 
-        <div class="right-div-home">
-            <img src="assets/Homepage-2.png">
-        </div>
 
-        <!--AboutImage-->
-        <div class="AboutImg">
-        </div>
 
-         <!--About-->
-        <section>
-            <div class="About">asd</div>
-        </section>
+    </div>
 
-         <!--Our Products-->
-        <div class="Products">
-            
-            <!--Card-->
-                <!--Card_01-->
-            <div class="products_row">
-                <div class="products_column">
-                    <div class="products_card">
-                        <img src="assets/products/01.png" class="products_icons">
-                            <div class="products_title">Card 1 Long Track Record</div>
-                            <div class="products_desc">Over a decade of industry expertise, serving esteemed clients like Bancnet, Security Bank and Metrobank. </div>
-                        </div>
-                    </div>
-                 <!--Card_02-->
-                    <div class="products_column">
-                        <div class="products_card">
-                            <img src="assets/products/01.png" class="products_icons">
-                                <div class="products_title">Card 1 Long Track Record</div>
-                                <div class="products_desc">Over a decade of industry expertise, serving esteemed clients like Bancnet, Security Bank and Metrobank. </div>
-                            </div>
-                        </div>
-                 <!--Card_02-->
-                 <div class="products_column">
-                    <div class="products_card">
-                        <img src="assets/products/01.png" class="products_icons">
-                            <div class="products_title">Card 1 Long Track Record</div>
-                            <div class="products_desc">Over a decade of industry expertise, serving esteemed clients like Bancnet, Security Bank and Metrobank. </div>
-                        </div>
-                    </div>
-                     <!--Card_02-->
-                     <div class="products_column">
-                        <div class="products_card">
-                            <img src="assets/products/01.png" class="products_icons">
-                                <div class="products_title">Card 1 Long Track Record</div>
-                                <div class="products_desc">Over a decade of industry expertise, serving esteemed clients like Bancnet, Security Bank and Metrobank. </div>
-                            </div>
-                        </div>
-                         <!--Card_02-->
-                    <div class="products_column">
-                        <div class="products_card">
-                            <img src="assets/products/01.png" class="products_icons">
-                                <div class="products_title">Card 1 Long Track Record</div>
-                                <div class="products_desc">Over a decade of industry expertise, serving esteemed clients like Bancnet, Security Bank and Metrobank. </div>
-                            </div>
-                        </div>
-                         <!--Card_02-->
-                    <div class="products_column">
-                        <div class="products_card">
-                            <img src="assets/products/01.png" class="products_icons">
-                                <div class="products_title">Card 1 Long Track Record</div>
-                                <div class="products_desc">Over a decade of industry expertise, serving esteemed clients like Bancnet, Security Bank and Metrobank. </div>
-                            </div>
-                        </div>
+    <div class="right-div-home">
+        <img src="assets/Homepage-2.png">
+    </div>
+
+    <!--AboutImage-->
+    <div class="AboutImg">
+    </div>
+
+    <!--About-->
+    <section>
+        <div id="About" class="About">asd</div>
+    </section>
+
+    <!--Our Products-->
+    <div id="Products" class="Products">
+
+        <!--Card-->
+        <!--Card_01-->
+        <div class="products_row">
+            <div class="products_column">
+                <div class="products_card">
+                    <img src="assets/products/01.png" class="products_icons">
+                    <div class="products_title">Card 1 Long Track Record</div>
+                    <div class="products_desc">Over a decade of industry expertise, serving esteemed clients like
+                        Bancnet, Security Bank and Metrobank. </div>
                 </div>
             </div>
-            <!--Card End-->
-            
+            <!--Card_02-->
+            <div class="products_column">
+                <div class="products_card">
+                    <img src="assets/products/01.png" class="products_icons">
+                    <div class="products_title">Card 1 Long Track Record</div>
+                    <div class="products_desc">Over a decade of industry expertise, serving esteemed clients like
+                        Bancnet, Security Bank and Metrobank. </div>
+                </div>
+            </div>
+            <!--Card_02-->
+            <div class="products_column">
+                <div class="products_card">
+                    <img src="assets/products/01.png" class="products_icons">
+                    <div class="products_title">Card 1 Long Track Record</div>
+                    <div class="products_desc">Over a decade of industry expertise, serving esteemed clients like
+                        Bancnet, Security Bank and Metrobank. </div>
+                </div>
+            </div>
+            <!--Card_02-->
+            <div class="products_column">style.css
+                <div class="products_card">
+                    <img src="assets/products/01.png" class="products_icons">
+                    <div class="products_title">Card 1 Long Track Record</div>
+                    <div class="products_desc">Over a decade of industry expertise, serving esteemed clients like
+                        Bancnet, Security Bank and Metrobank. </div>
+                </div>
+            </div>
+            <!--Card_02-->
+            <div class="products_column">
+                <div class="products_card">
+                    <img src="assets/products/01.png" class="products_icons">
+                    <div class="products_title">Card 1 Long Track Record</div>
+                    <div class="products_desc">Over a decade of industry expertise, serving esteemed clients like
+                        Bancnet, Security Bank and Metrobank. </div>
+                </div>
+            </div>
+            <!--Card_02-->
+            <div class="products_column">
+                <div class="products_card">
+                    <img src="assets/products/01.png" class="products_icons">
+                    <div class="products_title">Card 1 Long Track Record</div>
+                    <div class="products_desc">Over a decade of industry expertise, serving esteemed clients like
+                        Bancnet, Security Bank and Metrobank. </div>
+                </div>
+            </div>
         </div>
     </div>
+    <!--Card End-->
 
-         <!--Our Client-->
-          <div class="Clients">asd</div>
+    </div>
     </div>
 
-         <!--Contact-->
-          <div class="Contacts">asd</div>
+    <!--Our Client-->
+    <div class="Clients">asd</div>
     </div>
 
-    <footer>
-        <div class="footer">
-            <p>this is footer</p>
-        </div>
-    </footer>
-    
-    <script src="script.js"></script>
+    <!--Contact-->
+    <div class="Contacts">this is contacts</div>
+    </div>
+
+
+<script src="scripts/title.js"></script>
+    <!-- <script src="script.js"></script> -->
 </body>
+
 </html>
