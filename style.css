@@ -190,6 +190,7 @@ body {
 .home {
     display:'flexbox';
     width: 100%;
+    position: fixed;
 }
 
 /* Left div takes 30% width */
