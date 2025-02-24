@@ -1,0 +1,358 @@
+@font-face {
+    font-family: 'AvenirLight';
+    src: url(assets/Fonts/Avenir-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(assets/Fonts/Poppins-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif, 'AvenirLight', 'Poppins';
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #73CCB0;
+    height: 70px;
+}
+
+.nav-logo {
+    margin-left: 40px;
+    max-height: 45px;
+    max-width: 81px;
+}
+
+.nav-menu {
+    margin-right: 50px;
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 4rem;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #062D3E;
+    font-size: 14px;
+    font-weight: 100;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #008cff;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none; /* Hidden by default for larger screens */
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 40px; /* Add margin to align with the menu */
+}
+
+.hamburger .bar {
+    width: 25px; /* Increase width if necessary */
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed; /* Fixed to prevent horizontal scroll */
+        right: -50px;
+        top: 0;
+        height: 100vh;
+        background-color: #73CCB0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 250px;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+        overflow: hidden;
+    }
+
+    .nav-menu li {
+        margin: 20px;
+    }
+
+    .nav-menu.active {
+        transform: translateX(0); /* Show the menu */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on mobile screens */
+    }
+
+    .close-btn {
+        display: none;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transform: scale(2);
+        color: white;
+    }
+
+    .nav-menu.active .close-btn {
+        display: block;
+    }
+}
+
+/* Ensure the close button is always hidden on larger screens */
+@media screen and (min-width: 769px) {
+    .close-btn {
+        display: none;
+    }
+}
+
+/*Card Pages*/
+
+.AboutImg {
+    width: 100%; /* Image will adjust based on container width */
+    height: 100vh;
+    background: white;
+    background-image: url('assets/About.png');
+    background-size: 100% 120%;
+    background-repeat: no-repeat;
+    border-radius: 44px 44px 0 0;
+    display: flex;
+    position: sticky;
+    top: 0;
+}
+
+.About {
+    width: 100%;
+    height: 100vh;
+    background: orange;
+    border-radius: 40px 40px 0 0;
+    display: flex;
+    position: sticky;
+    top: 0;
+}
+
+.Products {
+    width: 100%;
+    height: 120vh;
+    border-radius: 40px 40px 0 0;
+    background: yellow;
+    display: flex;
+    position: relative;
+    top: 0;
+}
+
+.Clients {
+    width: 100%;
+    height: 100vh;
+    border-radius: 40px 40px 0 0;
+    background: greenyellow;
+    display: flex;
+    position: sticky;
+    top: 0;
+}
+
+.Contacts {
+    width: 100%;
+    height: 100vh;
+    border-radius: 40px 40px 0 0;
+    background: violet;
+    display: flex;
+    position: sticky;
+    top: 0;
+}
+
+/* Layout for left and right div */
+.home {
+    display:'flexbox';
+    width: 100%;
+}
+
+/* Left div takes 30% width */
+.left-div-home {
+    width: 55%;
+    height: 550px;
+    background-color: green;
+    float: left;
+}
+
+/* Right div takes 70% width */
+.right-div-home {
+    width: 45%;
+    height: 550px;
+    background-color: blue;
+    float: right;
+    margin: 0 auto;
+}
+
+/* Ensure right div content adjusts */
+.right-div-home img {
+    width: 80%; /* Image will adjust based on container width */
+    height: auto;
+    margin: 10%;
+    margin-top: 5%;
+    
+    
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column; /* Stack divs vertically */
+    }
+
+    .left-div-home, .right-div-home {
+        width: 100%;
+        height: auto; /* Adjust height for mobile view */
+    }
+}
+
+/* Default font size for desktop */
+.home-title {
+    font-size: 55px;
+    color: #0D90C9;
+    padding-top: 190px;
+    padding-left: 50px;
+}
+
+/* Media query for mobile */
+@media (max-width: 600px) {
+    .home-title {
+        font-size: 27px;
+        padding-top: 45px;
+        padding-left: 20px;
+    }
+}
+
+.home-desc {
+    font-size: 30px;
+    font-weight: 100;
+    font-family: 'AvenirLight';
+    color: #062D3E;
+    line-height: 1.4em;
+    padding-top: 15px;
+    padding-left: 50px;
+}
+
+/* Media query for mobile */
+@media (max-width: 600px) {
+    .home-desc {
+        font-size: 15px;
+        font-weight: 300;
+        padding-top: 10px;
+        padding-left: 20px;
+    }
+}
+
+/* Home button */
+.home-button {
+    margin-top: 34px;
+    margin-left: 29px;
+    background-color: #0198CC;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+    .home-button {
+        width: 173px;
+        height: 46px;
+        margin-top: 34px;
+        margin-left: 50px;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+    .home-button {
+        width: 106px;
+        height: 29px;
+        font-size: 14px;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+}
+
+/*Products*/
+
+/*Products Card*/
+
+.products_row {
+    margin: 0 -5px 0 50px;
+ 
+    
+}
+
+/* Clear floats after the columns */
+.products_row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.products_column {
+    align-items: center;
+    float: left;
+    width: 30%;
+    margin: 10px 20px;
+    
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .products_column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+.products_card {
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px 16px 10px 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    width: 300px;
+    height: 260px;
+}
+
+.products_icons {
+    align-items: center;
+    width: 142px;
+    height: 142px;
+}
+
+.products_title {
+    margin: 30px 0 6px 0x;
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: #17B381;
+    align-items: center;
+}
+
+.products_desc {
+    margin: 6px 20px 12px 20px;
+    font-size: 12px;
+    font-family: "AvenirLight";
+    align-items: center;
+}
