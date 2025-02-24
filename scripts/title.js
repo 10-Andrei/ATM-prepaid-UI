@@ -3,6 +3,7 @@ function changeTitle(newTitle) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section, div[id]"); // Select sections and divs with IDs
     const navLinks = document.querySelectorAll(".nav-menu li a");
 
     // Scroll to the top on page refresh
@@ -26,7 +27,31 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    // Create an IntersectionObserver to detect visible sections
+    const observer = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute("id");
+                    if (id) {
+                        const link = document.querySelector(`.nav-menu a[href="#${id}"]`);
+                        if (link) {
+                            changeTitle(link.innerText + " | ATM Prepaid");
+
+                            // Highlight the active link
+                            navLinks.forEach(nav => nav.classList.remove("active"));
+                            link.classList.add("active");
+                        }
+                    }
+                }
+            });
+        },
+        { root: null, threshold: 0.5 } // 50% of the section should be visible
+    );
+
+    // Observe all sections
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 });
-
-
-
