@@ -16,22 +16,30 @@
 
 body {
     font-family: Arial, sans-serif, 'AvenirLight', 'Poppins';
-    overflow-x: hidden;
-    padding-top: 70px;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-.navbar {
+/* .navbar {
+    position: -webkit-sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #73CCB0;
     height: 70px;
-    position: fixed;
+} */
+
+.navbar {
+    position: sticky; /* ✅ Fix: Sticky position */
     top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+    z-index: 1000; /* ✅ Fix: Ensures navbar stays on top */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #73CCB0;
+    height: 70px;
 }
+
 
 .nav-logo {
     margin-left: 40px;
@@ -80,7 +88,7 @@ body {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .nav-menu {
-        /* position: fixed;  */
+        position: fixed; /* Fixed to prevent horizontal scroll */
         right: -50px;
         top: 0;
         height: 100vh;
