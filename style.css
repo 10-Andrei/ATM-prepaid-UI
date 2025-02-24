@@ -186,6 +186,27 @@ body {
     top: 0;
 }
 
+/* Footer */
+.footer {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    background-color: #fff;
+    color: #A2D3E8;
+    padding-left: 20px; 
+}
+
+#Home, 
+#About,
+#Products,
+#Clients,
+#Contacts {
+    scroll-margin: 70px;
+}
+
 /* Layout for left and right div */
 .container-home {
     position: relative;
@@ -372,8 +393,3 @@ body {
     align-items: center;
 }
 
-/* Footer */
-.footer {
-    background-color: #008cff;
-    z-index: 1;
-}
