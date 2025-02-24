@@ -57,6 +57,10 @@ body {
     transition: color 0.3s ease;
 }
 
+.nav-menu li a.active {
+    color: #008cff;
+}
+
 .nav-menu li a:hover {
     color: #008cff;
 }
