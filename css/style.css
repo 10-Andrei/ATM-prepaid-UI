@@ -166,7 +166,7 @@ body {
 }
 
 
-/* Responsive Adjustments */
+/* about responsive */
 @media (max-width: 768px) {
     .AboutImg {
         height: 50vh; /* Reduce height further for tablets */
@@ -497,7 +497,7 @@ body {
 }
 
 
-/* Navbar Adjustments */
+/* responsive narbar */
 @media (max-width: 1024px) {
     .nav-menu {
         gap: 30px;
