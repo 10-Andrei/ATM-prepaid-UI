@@ -5,13 +5,13 @@ function changeTitle(newTitle) {
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section, div[id]");
     const navLinks = document.querySelectorAll(".nav-menu li a");
-    const homeLink = document.querySelector(".nav-menu .home-hover"); // Select Home link
-    let manualClick = false; // Track manual clicks
+    const homeLink = document.querySelector(".nav-menu .home-hover");
+    let manualClick = false;
 
     window.scrollTo(0, 0);
     localStorage.removeItem("activeNav");
 
-    // Ensure Home link is always black
+    // Home link stays black
     homeLink.classList.add("home-active");
 
     navLinks.forEach(link => {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Remove active from all links
             navLinks.forEach(nav => nav.classList.remove("active"));
 
-            // Add active class except for Home (Home stays black)
+            // Add active class except for Home
             if (!this.classList.contains("home-hover")) {
                 this.classList.add("active");
             }
