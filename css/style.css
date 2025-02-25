@@ -156,7 +156,7 @@ body {
 .AboutImg {
     width: 100%;
     height: 100vh;
-    background-image: url('/assets/About.png');
+    background-image: url('../assets/About.png');
     background-size: 100% 120%;
     background-repeat: no-repeat;
     border-radius: 44px 44px 0 0;
