@@ -45,7 +45,7 @@ body {
     padding: 0;
     list-style: none;
     display: flex;
-    gap: 70px;
+    gap: 65px;
 }
 
 .nav-menu li a {
@@ -73,6 +73,10 @@ body {
     padding: 10px 25px;
     text-align: center;
     transition: background-color 0.3s, border-color 0.3s, color 0.3s; 
+}
+
+.nav-menu .home-hover:active {
+    color: black;
 }
 
 .nav-menu .home-hover:hover {
@@ -156,7 +160,7 @@ body {
     background-size: 100% 120%;
     background-repeat: no-repeat;
     border-radius: 44px 44px 0 0;
-    display: flex;
+    display: block;
     position: sticky;
     top: 0;
 }

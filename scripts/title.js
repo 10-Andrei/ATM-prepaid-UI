@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
     window.scrollTo(0, 0);
     localStorage.removeItem("activeNav");
 
+    // Ensure Home link is always black
+    homeLink.classList.add("home-active");
+
     navLinks.forEach(link => {
         link.addEventListener("click", function (event) {
             event.preventDefault();
@@ -19,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Remove active from all links
             navLinks.forEach(nav => nav.classList.remove("active"));
 
-            // Skip adding active class for Home
+            // Add active class except for Home (Home stays black)
             if (!this.classList.contains("home-hover")) {
                 this.classList.add("active");
             }
@@ -36,11 +39,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const observer = new IntersectionObserver(
         entries => {
-            if (manualClick) return; // Skip observer logic if manually clicked "Home"
+            if (manualClick) return; // Skip observer logic if manually clicked
+
+            let isHomeVisible = false;
 
             entries.forEach(entry => {
+                const id = entry.target.getAttribute("id");
                 if (entry.isIntersecting) {
-                    const id = entry.target.getAttribute("id");
                     if (id) {
                         const link = document.querySelector(`.nav-menu a[href="#${id}"]`);
                         if (link && !link.classList.contains("home-hover")) {
@@ -51,11 +56,27 @@ document.addEventListener("DOMContentLoaded", function () {
                             link.classList.add("active");
                         }
                     }
+
+                    if (id === "home") {
+                        isHomeVisible = true;
+                    }
                 }
             });
+
+            // Remove active class from all links if Home is visible or scrolled to top
+            if (isHomeVisible || window.scrollY === 0) {
+                navLinks.forEach(nav => nav.classList.remove("active"));
+            }
         },
         { root: null, threshold: 0.5 }
     );
 
     sections.forEach(section => observer.observe(section));
+
+    // Additional check for when user scrolls manually to the top
+    window.addEventListener("scroll", () => {
+        if (window.scrollY === 0) {
+            navLinks.forEach(nav => nav.classList.remove("active"));
+        }
+    });
 });
