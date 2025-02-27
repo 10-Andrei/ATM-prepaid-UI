@@ -101,7 +101,7 @@ body {
     width: 25px;
     /* Increase width if necessary */
     height: 3px;
-    background-color: white;
+    background-color: var(--bg-main);
     margin: 3px 0;
     transition: 0.4s;
 }
@@ -246,11 +246,12 @@ body {
 .white-bg {
     background-color: white;
 }
+
 .product-img {
     width: 100%;
-    height: 82vh;
+    height: 80vh;
     background-image: url('../assets/our-product-logo.png');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     border-radius: 44px 44px 0 0;
     display: block;
@@ -261,12 +262,31 @@ body {
 
 }
 
+/* Product Responsive */
+@media (max-width: 1024px) {
+    .product-img {
+        max-height: 60vh;
+        border-radius: 30px 30px 0 0;
+    }
+}
 
+@media (max-width: 768px) {
+    .product-img {
+        max-height: 50vh;
+        border-radius: 20px 20px 0 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-img {
+        max-height: 40vh;
+        border-radius: 15px 15px 0 0;
+    }
+}
 
 .Clients {
     width: 100%;
     height: 100vh;
-    border-radius: 40px 40px 0 0;
     background: greenyellow;
     display: flex;
     position: relative;
@@ -275,24 +295,24 @@ body {
 
 .contact-container {
     width: 100%;
-    height: 100vh;
+    height: auto;
     background: var(--bg-main);
     display: flex;
     position: relative;
     top: 0;
 }
 
+/* Desktop Layout */
 .contact-section {
     background-color: var(--bg-main);
     margin: var(--section-margin);
-    /* margin-left: 50px;
-    margin-right: 50px; */
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 0 3%;
 }
 
+/* Left Side - Image */
 .contact-left {
     display: flex;
     justify-content: center;
@@ -302,12 +322,11 @@ body {
 }
 
 .contact-left img {
-    /* width: 507px;
-    height: 439px; */
     width: 602px;
     height: 523px;
 }
 
+/* Right Side - Form */
 .contact-right {
     background-color: var(--bg-main);
     width: 50%;
@@ -316,12 +335,102 @@ body {
     align-items: center;
 }
 
+/* Form Styling */
 .contact-form {
     width: 602px;
-    height: 523px;
+    height: auto; /* Adjust height based on content */
     margin: 10px;
     padding: 20px;
 }
+
+/* Label and Input Styling */
+.input-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.input-field input,
+.textarea-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.textarea-field {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.textarea-field label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* ================= MEDIA QUERIES ================== */
+
+/* For Tablets (768px and below) */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-left, .contact-right {
+        width: 100%;
+    }
+
+    .contact-left img {
+        width: 80%;
+        height: auto;
+        max-width: 450px;
+    }
+
+    .contact-form {
+        width: 90%;
+        max-width: 500px;
+    }
+}
+
+/* For Mobile Screens (480px and below) */
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 0 5%;
+    }
+
+    .contact-left img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .input-field label {
+        font-size: 14px;
+    }
+
+    .input-field input,
+    .textarea-field textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+
+
 
 .wave-container {
     position: relative;
@@ -606,8 +715,6 @@ span {
 
 .products_row {
     margin: 0 -5px 0 50px;
-
-
 }
 
 /* Clear floats after the columns */
