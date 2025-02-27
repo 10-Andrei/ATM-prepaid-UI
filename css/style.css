@@ -11,6 +11,8 @@
 :root {
     --section-margin: 80px 0 20px;
     --bg-main: #ffffff;
+    --color-dark: #000000;
+    --color-light: #fff;
 }
 * {
     margin: 0;
@@ -233,18 +235,62 @@ body {
     /* position: relative; */
 }
 
-.Products {
+.product-container {
     width: 100%;
-    height: 120vh;
+    height: 100vh;
     /* border-radius: 40px 40px 0 0; */
-    background: yellow;
+    background-color: var(--bg-main);
     display: flex;
+    justify-content: center;
+    gap: 2%;
+    padding: 50px;
+    flex-wrap: wrap;
     position: relative;
+    /* align-items: center; */
+    align-content: center;
     /* top: -60px; */
     top: 0;
 }
-.white-bg {
-    background-color: white;
+
+.product-card {
+    border: 2px solid #17B381;
+    margin-top: 10%;
+    padding: 20px;
+    width: 267px;
+    height: 341px;
+    border-radius: 10px;
+}
+
+.product-card-img img{
+    height: 208px;
+    width: 208px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    margin: auto;     
+}
+
+.product-card-btn {
+    height: auto;
+    width: 208px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
+    margin: auto;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.product-btn  {
+    height: 42px;
+    width: 142px;
+    border-radius: 0;
+    background-color: var(--bg-main);
+}
+
+.product-btn:hover {
+    background-color: var(--color-dark);
+    color: var(--color-light);
 }
 
 .product-overlay {
@@ -332,6 +378,7 @@ body {
     width: 100%;
     height: 100vh;
     background: greenyellow;
+    /* background-color: var(--bg-main); */
     display: flex;
     position: relative;
     top: 0;
@@ -397,7 +444,6 @@ body {
 .input-field label {
     display: block;
     margin-bottom: 10px;
-    font-weight: bold;
 }
 
 .input-field input,
@@ -417,7 +463,6 @@ body {
 
 .textarea-field label {
     margin-bottom: 10px;
-    font-weight: bold;
 }
 
 /* ================= MEDIA QUERIES ================== */
@@ -511,7 +556,6 @@ h2 {
 
 label {
     font-size: 14px;
-    font-weight: 600;
     color: #062D3E;
     margin-bottom: 5px;
 }
