@@ -743,16 +743,13 @@ button:hover {
     display: flex;
     align-items: center;
     gap: 2px;
-    margin-bottom: 5px; 
-    font-size: 1em;
-    line-height: normal;
 }
 
 .footer-item img {
     width: auto; 
-    height: 45px;
+    height: 60px;
+    margin: -15px;
 }
-
 .footer-right {
     text-align: left;
     padding: 10px;
@@ -773,11 +770,8 @@ p {
     line-height: 1.5;
 }
 
-span img{
-    font-size: 18px;
-    color: #16a085;
-    margin-right: 5px;
-    height: 80px;
+.customer-support {
+    margin-top: 20px;
 }
 
 /* Footer */
