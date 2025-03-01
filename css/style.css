@@ -262,23 +262,6 @@ body {
     height: 142px;
 }
 
-.about .about-article-two-container {
-    background-color: green;
-    padding: 20px;
-    border: 2px solid red;
-}
-
-.about .about-article-two {
-    background-color: gray;
-    margin: 20px;
-    padding: 20px;
-    border: 2px dotted red;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* position: relative; */
-}
 
 .product-container {
     width: 100%;
