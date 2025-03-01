@@ -445,9 +445,7 @@ body {
     padding: 20px; 
     max-width: 1200px; 
     margin: 0 auto;
-    border: 1px solid red;
 }
-
 
 
 .clients-icons-img img{
@@ -759,6 +757,7 @@ h3 {
     font-size: 2em;
     font-weight: bold;
     color: #324158;
+    margin-top: 20px;
     margin-bottom: 8px;
     text-indent: 30px;
 }

@@ -3,21 +3,21 @@ function changeTitle(newTitle) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("section, div[id]");
     const navLinks = document.querySelectorAll(".nav-menu li a");
     const homeLink = document.querySelector(".nav-menu .home-hover");
     let manualClick = false;
+    let switchTimeout;
 
     window.scrollTo(0, 0);
     localStorage.removeItem("activeNav");
 
-    // Home link stays black
+    // Home link stays active
     homeLink.classList.add("home-active");
 
     navLinks.forEach(link => {
         link.addEventListener("click", function (event) {
             event.preventDefault();
-            manualClick = true; // Set flag to ignore observer temporarily
+            manualClick = true; // Ignore observer temporarily
 
             // Remove active from all links
             navLinks.forEach(nav => nav.classList.remove("active"));
@@ -29,51 +29,77 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const sectionId = this.getAttribute("href").substring(1);
             if (sectionId) {
-                document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+                slowScrollTo(document.getElementById(sectionId).offsetTop, 1500);
             }
 
-            // Reset flag after scrolling
-            setTimeout(() => { manualClick = false; }, 1000);
+            setTimeout(() => { manualClick = false; }, 1600);
         });
     });
 
+    function slowScrollTo(targetPosition, duration) {
+        const startPosition = window.scrollY;
+        const distance = targetPosition - startPosition;
+        let startTime = null;
+
+        function animation(currentTime) {
+            if (!startTime) startTime = currentTime;
+            const elapsedTime = currentTime - startTime;
+            const ease = easeInOutQuad(elapsedTime, startPosition, distance, duration);
+            window.scrollTo(0, ease);
+
+            if (elapsedTime < duration) {
+                requestAnimationFrame(animation);
+            }
+        }
+
+        function easeInOutQuad(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return (c / 2) * t * t + b;
+            t--;
+            return (-c / 2) * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+    }
+
     const observer = new IntersectionObserver(
         entries => {
-            if (manualClick) return; // Skip observer logic if manually clicked
+            if (manualClick) return;
 
-            let isHomeVisible = false;
+            clearTimeout(switchTimeout);
+            switchTimeout = setTimeout(() => {
+                let isHomeVisible = false;
+                let activeSection = null;
 
-            entries.forEach(entry => {
-                const id = entry.target.getAttribute("id");
-                if (entry.isIntersecting) {
-                    if (id) {
-                        const link = document.querySelector(`.nav-menu a[href="#${id}"]`);
-                        if (link && !link.classList.contains("home-hover")) {
-                            changeTitle(link.innerText + " | ATM Prepaid");
-
-                            // Remove active from all links
-                            navLinks.forEach(nav => nav.classList.remove("active"));
-                            link.classList.add("active");
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        activeSection = entry.target;
+                        if (entry.target.id === "home") {
+                            isHomeVisible = true;
                         }
                     }
+                });
 
-                    if (id === "home") {
-                        isHomeVisible = true;
+                navLinks.forEach(nav => nav.classList.remove("active"));
+
+                if (activeSection) {
+                    const link = document.querySelector(`.nav-menu a[href="#${activeSection.id}"]`);
+                    if (link && !link.classList.contains("home-hover")) {
+                        changeTitle(link.innerText + " | ATM Prepaid");
+                        link.classList.add("active");
                     }
                 }
-            });
 
-            // Remove active class from all links if Home is visible or scrolled to top
-            if (isHomeVisible || window.scrollY === 0) {
-                navLinks.forEach(nav => nav.classList.remove("active"));
-            }
+                if (isHomeVisible || window.scrollY === 0) {
+                    navLinks.forEach(nav => nav.classList.remove("active"));
+                }
+            }, 500);
         },
         { root: null, threshold: 0.5 }
     );
 
-    sections.forEach(section => observer.observe(section));
+    document.querySelectorAll("section, div[id]").forEach(section => observer.observe(section));
 
-    // Additional check for when user scrolls manually to the top
     window.addEventListener("scroll", () => {
         if (window.scrollY === 0) {
             navLinks.forEach(nav => nav.classList.remove("active"));
