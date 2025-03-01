@@ -750,6 +750,7 @@ button:hover {
     height: 60px;
     margin: -15px;
 }
+
 .footer-right {
     text-align: left;
     padding: 10px;
@@ -761,7 +762,7 @@ h3 {
     font-weight: bold;
     color: #324158;
     margin-bottom: 8px;
-    text-indent: 50px;
+    text-indent: 30px;
 }
 
 p {
