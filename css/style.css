@@ -16,7 +16,7 @@
     --color-light: #fff;
     --font-poppins: 'Poppins', sans-serif;
     --font-AvenirLight: 'AvenirLight', sans-serif;
-    --font-nav: 'Arial', sans-serif;
+    --font-arial: 'Arial', sans-serif;
 }
 * {
     margin: 0;
@@ -25,14 +25,14 @@
 }
 
 body {
-    /* font-family: 'Arial', 'AvenirLight', 'Poppins', sans-serif; */
+    font-family: 'Arial', 'AvenirLight', 'Poppins', sans-serif;
     overflow-x: hidden;
     padding-top: 70px;
     background-color: var(--bg-main);
 }
 
 .navbar {
-    font-family: var(--font-nav);
+    font-family: var(--font-arial);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -413,7 +413,7 @@ body {
 
 .clients-container {
     width: 100%;
-    padding: 5%;
+    padding: 5% 0;
     background-color: var(--bg-main);
     position: relative;
     top: 0; 
@@ -440,15 +440,6 @@ body {
     margin: var(--section-margin);
 }
 
-/* .clients-partner-icons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 30px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-} */
 
 .clients-partner-icons {
     display: flex;
@@ -456,8 +447,10 @@ body {
     justify-content: center; 
     gap: 30px; 
     padding: 20px; 
-    margin: 0 auto; 
+    max-width: 1200px; 
+    margin: 0 auto;
 }
+
 
 .clients-icons-img img{
     height: 180px;
@@ -465,6 +458,43 @@ body {
     padding: 5px;
 }
 
+.clients-divider {
+    background-color: #0C88BB;
+    margin: var(--section-margin);
+    padding: 20px;
+}
+
+.clients-divider h1 {
+    font-size: 3.5em;
+    color: var(--color-light);
+    font-family: var(--font-poppins);
+    font-weight: bold;
+}
+
+.clients-review {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: var(--section-margin);
+}
+
+.clients-review-card {
+    width: 400px;
+    margin: 0 30px;
+}
+
+.clients-review-card p {
+    font-size: 18px;
+    padding: 10px;
+    font-family: var(--font-AvenirLight);
+}
+
+.clients-review-card img {
+    height: 150px;
+    width: fit-content;
+}
+
+/* Contact Section */
 .contact-container {
     width: 100%;
     height: auto;
@@ -472,6 +502,7 @@ body {
     display: flex;
     position: relative;
     top: 0;
+    margin: 0;
 }
 
 /* Desktop Layout */
@@ -510,9 +541,14 @@ body {
 /* Form Styling */
 .contact-form {
     width: 602px;
-    height: auto; /* Adjust height based on content */
+    height: auto;
     margin: 10px;
     padding: 20px;
+    font-family: var(--font-arial);
+}
+
+.contact-form h2 {
+    font-weight: normal;
 }
 
 /* Label and Input Styling */
