@@ -26,6 +26,7 @@
 
 body {
     font-family: 'Arial', 'AvenirLight', 'Poppins', sans-serif;
+    color: var(--color-dark);
     overflow-x: hidden;
     padding-top: 70px;
     background-color: var(--bg-main);
@@ -210,39 +211,40 @@ body {
 }
 
 .about-section {
-    background-color: lightblue;
+    background-color: var(--bg-main);
     margin: var(--section-margin);
     width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    /* grid-template-rows: repeat(3, 1fr); */
+    grid-template-rows: auto auto auto;
     gap: 8px;
-    border: 2px solid red;
 }
     
 .about-title {
     grid-column: span 2 / span 2;
     padding: 10px;
-    border: 2px solid red;
 }
 
 .about-title h1 {
-    border: 1px solid black;
     padding: 5px;
     margin: 30px;
-    font-size: 3em;
+    font-size: 2.75em;
     font-family: var(--font-poppins);
     color: #17B381;
+    font-weight: bolder;
 }
 
 .about-title p {
     font-family: var(--font-AvenirLight);
     margin: 30px 30px 0;
-    font-size: 1.5em;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 .about-title span {
     color: #17B381;
+    font-weight: bold;
 }
 
 .about-vector-img {
@@ -250,43 +252,48 @@ body {
     grid-row: span 2 / span 2;
     grid-column-start: 2;
     grid-row-start: 2;
-
-    border: 2px solid red;
-
 }
 
 .about-img-right {
-    /* grid-row: span 2 / span 2; */
     grid-column-start: 5;
     grid-row-start: 2;
+}
 
-    border: 2px solid red;
-
+.about-img-right img {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: 288px;
+    height: 197px;
 }
 
 .about-img-left {
     grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column: 1;
+}
 
-    border: 2px solid red;
-
+.about-img-left img {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 288px;
+    height: 197px;
 }
 
 .about-right-desc {
     grid-column: span 2 / span 2;
     grid-column-start: 4;
     grid-row-start: 3;
-
-    border: 2px solid red;
-
+    text-align: center;
 }
 
 .about-right-desc p {
     font-family: var(--font-AvenirLight);
+    font-size: 1.5em;
 }
 
 .about-right-desc span {
     font-weight: bold;
-    /* color: red; */
+    font-family: var(--font-AvenirLight);
 }
 
 
