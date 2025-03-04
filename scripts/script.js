@@ -1,12 +1,18 @@
-const hamburger = document.getElementById('hamburger'); // Selects the hamburger menu icon
-const navMenu = document.querySelector('.nav-menu'); // Selects the navigation menu
-const closeBtn = document.querySelector('.close-btn'); // Selects the close (X) button
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.querySelector('.nav-menu');
+const overlay = document.createElement('div'); // Create overlay dynamically
+overlay.classList.add('overlay');
+document.body.appendChild(overlay); // Append overlay to body
 
-hamburger.addEventListener('click', () => { // Adds a click event listener to the hamburger icon
-    navMenu.classList.toggle('active'); // Toggles the 'active' class on the navigation menu to show/hide it
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active'); 
+    hamburger.classList.toggle('active'); 
+    overlay.classList.toggle('active'); // Show/hide overlay
 });
 
-closeBtn.addEventListener('click', (e) => { // Adds a click event listener to the close button
-    e.preventDefault(); // Prevents the default link action (like jumping to the top of the page)
-    navMenu.classList.remove('active'); // Removes the 'active' class from the navigation menu to hide it
+// Close menu when clicking on overlay
+overlay.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    hamburger.classList.remove('active');
+    overlay.classList.remove('active');
 });

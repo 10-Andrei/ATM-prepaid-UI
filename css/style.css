@@ -106,15 +106,6 @@ body {
     margin-right: 40px;
 }
 
-.hamburger .bar {
-    width: 25px;
-    /* Increase width if necessary */
-    height: 3px;
-    background-color: var(--bg-main);
-    margin: 3px 0;
-    transition: 0.4s;
-}
-
 /* Ensure the close button is always hidden on larger screens */
 @media screen and (min-width: 769px) {
     .close-btn {
@@ -888,31 +879,6 @@ p {
 
 
 /* responsive narbar */
-@media (max-width: 1309px) {
-    .nav-menu {
-        position: fixed;
-        gap: 30px;
-        top: 70px;
-        right: 0;
-        width: 250px;
-        height: 100vh;
-        background-color: #73CCB0;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in-out;
-    }
-
-    .nav-menu.active {
-        transform: translateX(0);
-    }
-
-    .hamburger {
-        display: flex;
-    }
-}
-
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
@@ -923,9 +889,17 @@ p {
         background-color: #73CCB0;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         transform: translateX(100%);
         transition: transform 0.5s ease-in-out;
+        z-index: 500;
+        padding-top: 20px; /* Space for the image */
+    }
+
+    .nav-menu img {
+        width: 100px; /* Adjust as needed */
+        height: auto;
+        margin-bottom: 20px; /* Space between image and menu items */
     }
 
     .nav-menu.active {
@@ -933,6 +907,39 @@ p {
     }
 
     .hamburger {
+        color: var(--bg-main);
         display: flex;
+        cursor: pointer;
+        font-size: 24px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .hamburger.active::before {
+        content: "✖"; 
+    }
+
+    .hamburger::before {
+        content: "☰"; /* Default menu icon */
+    }
+    /* Dark overlay effect */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out;
+        z-index: 400; /* Behind the nav menu */
+    }
+
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
     }
 }
