@@ -1,3 +1,236 @@
+/* Navbar Section */
+
+
+
+/* Home Button Section */
+.home-button {
+    width: 173px;
+    height: 46px;
+    font-size: 19px;
+    margin-top: 34px;
+    margin-left: 50px;
+    background-color: #0198CC;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .home-button {
+        width: 150px;
+        height: 40px;
+        font-size: 16px;
+        margin-top: 25px;
+        margin-left: 30px;
+        border-radius: 22px;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-button {
+        width: 120px;
+        height: 35px;
+        font-size: 14px;
+        margin-top: 20px;
+        margin-left: 20px;
+        border-radius: 20px;
+        padding: 5px 10px;
+    }
+}
+
+/* Small Mobile (up to 400px) */
+@media (max-width: 768px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-div-home,
+    .right-div-home {
+        width: 100%;
+        height: auto;
+    }
+
+    .right-div-home img {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .home-button {
+        font-size: 14px;
+        padding: 8px 16px;
+        border-radius: 18px;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .home-button {
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+        padding: 5px 10px;
+        margin-top: 10px;
+        border-radius: 15px;
+    }
+}
+
+
+
+/* About Section */
+@media screen and (max-width: 1280px) {
+    .about-vector-img img{
+        width: 550px;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .about-vector-img img {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .about-vector-img {
+        display: none;
+
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .about-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .about-title {
+        order: 1;
+    }
+
+    .about-vector-img {
+        order: 2;
+        width: auto;
+    }
+
+    .about-img-left {
+        order: 3;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-img-left img {
+        width: 200px;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .about-right-desc {
+        order: 4;
+        max-width: 600px;
+    }
+
+    .about-img-right {
+        order: 5;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-img-right img {
+        width: 200px;
+        height: auto;
+        border-radius: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .AboutImg {
+        height: 50vh;
+        border-radius: 30px 30px 0 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .AboutImg {
+        height: 40vh;
+        border-radius: 20px 20px 0 0;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .about-section {
+        gap: 15px;
+    }
+
+    .about-title h1 {
+        font-size: 1.8em;
+    }
+
+    .about-title p {
+        font-size: 1.2em;
+    }
+
+    .about-vector-img {
+        display: none;
+    }
+
+    .about-img-left img,
+    .about-img-right img {
+        width: 180px;
+    }
+
+    .about-right-desc p {
+        font-size: 1em;
+    }
+}
+
+
+
+
+/* Product Section */
+@media (max-width: 1024px) {
+    .product-img {
+        max-height: 60vh;
+        border-radius: 30px 30px 0 0;
+    }
+    .product-overlay .product-product h1 {
+        font-size: 2.5em; /* Adjusted for readability */
+        margin-top: 40px;
+        padding: 5px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .product-img {
+        max-height: 50vh;
+        border-radius: 20px 20px 0 0;
+    }
+    .product-overlay .product-product h1 {
+        font-size: 2.2em; /* Slightly smaller for better fit */
+        margin-top: 45px;
+        margin-left: 30px;
+        padding: 5px;
+    }  
+}
+
+@media (max-width: 480px) {
+    .product-img {
+        max-height: 40vh;
+        border-radius: 15px 15px 0 0;
+    }
+    .product-overlay .product-product h1 {
+        font-size: 1.8em; /* Adjusted for small screens */
+        margin-top: 30px;
+        padding: 5px; 
+    }
+}
 
 /* Footer Section */
 @media screen and (max-width: 1024px) {

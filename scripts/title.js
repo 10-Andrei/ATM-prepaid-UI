@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 slowScrollTo(document.getElementById(sectionId).offsetTop, 1500);
             }
 
-            setTimeout(() => { manualClick = false; }, 1600);
+            setTimeout(() => { manualClick = false; }, 2000);
         });
     });
 
