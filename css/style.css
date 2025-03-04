@@ -922,20 +922,20 @@ p {
     }
 
     .hamburger::before {
-        content: "☰"; /* Default menu icon */
+        content: "☰"; 
     }
-    /* Dark overlay effect */
+
     .overlay {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+        background: rgba(0, 0, 0, 0.5);
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.3s ease-in-out;
-        z-index: 400; /* Behind the nav menu */
+        z-index: 400;
     }
 
     .overlay.active {
