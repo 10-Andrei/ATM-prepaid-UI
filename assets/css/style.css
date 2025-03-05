@@ -875,18 +875,6 @@ p {
 /* Second Page */
 
 /* Telco Load Section */
-#Topup,
-#Transpo,
-#Telco,
-#Epins {
-    scroll-margin-top: 120px; /* Adjust based on your navbar height */
-}
-
-.topup-section, .telco-container, .epins-section, .transpo-section {
-    padding-top: 100px; /* Adds space above */
-}
-
-
 .topup-section {
     background-color: red;
     height: 100vh;

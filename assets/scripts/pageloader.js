@@ -21,7 +21,7 @@ function checkAllPagesLoaded() {
                 const target = document.querySelector(window.location.hash);
                 if (target) {
                     window.scrollTo({
-                        top: target.offsetTop - 100, 
+                        top: target.offsetTop - 70, 
                         behavior: "smooth",
                     });
                 }
