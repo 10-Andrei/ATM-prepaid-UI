@@ -379,7 +379,7 @@ body {
 }
 
 .product-img{
-    background-image: url("/assets/images/product/our-product-logo.png");
+    background-image: url("http://10-andrei.github.io/ATM-prepaid-UI/assets/images/product/our-product-logo.png");
     width: 100%;
     height: auto;
     max-height: 80vh;
