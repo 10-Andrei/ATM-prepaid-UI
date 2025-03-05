@@ -1,15 +1,3 @@
-// function loadPage(sectionId, file, className, callback) {
-//     fetch(file)
-//         .then(response => response.text())
-//         .then(data => {
-//             let section = document.getElementById(sectionId);
-//             section.innerHTML = data;
-//             section.classList.add(className);
-//             if (callback) callback();
-//         });
-// }
-
-
 function loadPage(sectionId, file, className, callback) {
     fetch(file)
         .then(response => response.text())
@@ -17,14 +5,9 @@ function loadPage(sectionId, file, className, callback) {
             let section = document.getElementById(sectionId);
             section.innerHTML = data;
             section.classList.add(className);
-
-            // Reapply background image
-            section.style.backgroundImage = "url('/assets/images/product/our-product-logo.png')";
-
-            if (callback) callback(); // Call callback after loading
+            if (callback) callback();
         });
 }
-
 
 // Load all pages and then adjust scrolling
 let pagesLoaded = 0;
