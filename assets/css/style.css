@@ -115,8 +115,7 @@ body {
 }
 
 .AboutImg {
-    /* background-image: url('/assets/images/about/about-banner.png'); */
-    background-image: url('assets/About.png');
+    background-image: url('/assets/images/about/about-banner.png?v=2');
     width: 100%;
     height: 100vh;
     aspect-ratio: 16 / 9;
