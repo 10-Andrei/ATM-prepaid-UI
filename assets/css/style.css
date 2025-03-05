@@ -30,6 +30,7 @@ body {
     overflow-x: hidden;
     padding-top: 70px;
     background-color: var(--bg-main);
+    scroll-behavior: smooth;
 }
 
 .navbar {
@@ -117,7 +118,7 @@ body {
     width: 100%;
     height: 100vh;
     aspect-ratio: 16 / 9;
-    background-image: url('../assets/About.png');
+    background-image: url('/assets/images/about/about-banner.png');
     background-size: 100% 120%;
     background-repeat: no-repeat;
     border-radius: 44px 44px 0 0;
@@ -336,6 +337,15 @@ body {
     background-color: var(--bg-main);
 }
 
+.product-btn a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.product-btn a:hover{
+    color: white;
+}
+
 .product-btn:hover {
     background-color: var(--color-dark);
     color: var(--color-light);
@@ -372,8 +382,8 @@ body {
 .product-img{
     width: 100%;
     height: auto;
-    max-height: 60vh;
-    background-image: url('../assets/our-product-logo.png');
+    max-height: 80vh;
+    background-image: url('/assets/images/product/our-product-logo.png');
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 44px 44px 0 0;
@@ -862,83 +872,40 @@ p {
     padding-left: 20px;
 }
 
+/* Second Page */
+
+/* Telco Load Section */
+#Topup,
+#Transpo,
+#Telco,
+#Epins {
+    scroll-margin-top: 120px; /* Adjust based on your navbar height */
+}
+
+.topup-section, .telco-container, .epins-section, .transpo-section {
+    padding-top: 100px; /* Adds space above */
+}
 
 
+.topup-section {
+    background-color: red;
+    height: 100vh;
 
+}
+.transpo-section {
 
+    background-color: green;
+    height: 100vh;
+}
+.telco-section {
+    background-color: blue;
+    height: 100vh;
 
+}
 
+.epins-section {
+    background-color: black;
+    color: white;
+    height: 100vh;
 
-
-
-
-
-
-
-
-
-
-@media (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        top: 70px;
-        right: 0;
-        width: 250px;
-        height: 100vh;
-        background-color: #73CCB0;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        transform: translateX(100vw);
-        transition: transform 0.3s ease-in-out;
-        z-index: 500;
-        padding-top: 20px; 
-    }
-
-    .nav-menu img {
-        width: 100px; /* Adjust as needed */
-        height: auto;
-        margin-bottom: 20px; 
-    }
-
-    .nav-menu.active {
-        transform: translateX(0);
-    }
-
-    .hamburger {
-        color: var(--bg-main);
-        display: flex;
-        cursor: pointer;
-        font-size: 24px;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        z-index: 1000;
-    }
-
-    .hamburger.active::before {
-        content: "✖"; 
-    }
-
-    .hamburger::before {
-        content: "☰"; 
-    }
-
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease-in-out;
-        z-index: 400;
-    }
-
-    .overlay.active {
-        opacity: 1;
-        visibility: visible;
-    }
 }
