@@ -25,7 +25,7 @@ function checkAllPagesLoaded() {
                         behavior: "smooth",
                     });
                 }
-            }, 200); // Small delay ensures correct scrolling
+            }, 200);
         }
     }
 }
