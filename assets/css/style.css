@@ -878,20 +878,63 @@ p {
 /* Second Page */
 
 /* Telco Load Section */
+.telco-section {
+    background-color: blue;
+    height: 100vh;
+    /* background-image: url('/assets/images/product/our-product-logo.png'); */
+    background-image: url('/wave.svg');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid black;
+}
+
+.telco-title {
+    font-family: var(--font-poppins);
+    color: #17B381;
+    font-size: 2.5em;
+    padding: 20px;
+    width: 1253px;
+    height: 109px;
+}
+
+.telco-container {
+    background-color: var(--bg-main);
+    margin: auto;    
+    display: flex;
+    justify-content: center;
+}
+
+.telco-container-img {
+    margin: 44px;
+    width: 1253px;
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.telco-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 304px;
+    width: 312px;  
+}
+
+.telco-img img {
+    height: 149px;
+    width: 218px;
+}
+
 .topup-section {
     background-color: red;
     height: 100vh;
-
 }
+
 .transpo-section {
 
     background-color: green;
     height: 100vh;
-}
-.telco-section {
-    background-color: blue;
-    height: 100vh;
-
 }
 
 .epins-section {
