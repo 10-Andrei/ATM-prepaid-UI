@@ -840,7 +840,7 @@ p {
     background-size: contain; 
     background-repeat: no-repeat;
     background-position: bottom;
-    background-image: url('/assets/images/wave/page-wave.png'); 
+    /* background-image: url('/assets/images/wave/page-wave.png');  */
     transform: scaleX(-1); 
 }
 
