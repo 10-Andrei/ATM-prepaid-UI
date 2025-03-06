@@ -1,12 +1,24 @@
 function loadPage(sectionId, file, className, callback) {
+    let section = document.getElementById(sectionId);
+
+    // Apply class BEFORE loading content to preserve CSS styles
+    if (!section.classList.contains(className)) {
+        section.classList.add(className);
+    }
+
     fetch(file)
         .then(response => response.text())
         .then(data => {
-            let section = document.getElementById(sectionId);
+            // Preserve existing styles by NOT overriding inline styles
+            let currentStyle = section.getAttribute("style") || "";
+
+            // Only replace inner content, keeping existing styles
             section.innerHTML = data;
-            section.classList.add(className);
+            section.setAttribute("style", currentStyle);
+
             if (callback) callback();
-        });
+        })
+        .catch(error => console.error(`Error loading ${file}:`, error));
 }
 
 // Load all pages and then adjust scrolling
@@ -30,13 +42,8 @@ function checkAllPagesLoaded() {
     }
 }
 
+// Load pages without overriding CSS
 loadPage("Telco", "telco.html", "telco-section", checkAllPagesLoaded);
 loadPage("Transpo", "transpo.html", "transpo-section", checkAllPagesLoaded);
 loadPage("Epins", "epins.html", "epins-section", checkAllPagesLoaded);
 loadPage("Topup", "topup.html", "topup-section", checkAllPagesLoaded);
-
-// loadPage("Telco", "telco.html", checkAllPagesLoaded);
-// loadPage("Transpo", "transpo.html", checkAllPagesLoaded);
-// loadPage("Epins", "epins.html", checkAllPagesLoaded);
-// loadPage("Topup", "topup.html", checkAllPagesLoaded);
-
