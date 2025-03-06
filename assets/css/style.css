@@ -834,7 +834,15 @@ p {
 /* Second Page */
 
 /* Telco Load Section */
-
+.telco-container {
+    background-color: white;
+    height: 100vh; 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: url('/assets/images/wave/page-wave.svg'); 
+    transform: scaleX(-1); 
+}
 
 .telco-title {
     font-family: var(--font-poppins);
@@ -845,7 +853,7 @@ p {
     height: 109px;
 }
 
-.telco-container {
+.telco-container-img {
     background-color: var(--bg-main);
     margin: auto;    
     display: flex;
@@ -860,6 +868,8 @@ p {
     display: flex;
     flex-wrap: wrap;
 }
+
+
 
 .telco-img {
     display: flex;
