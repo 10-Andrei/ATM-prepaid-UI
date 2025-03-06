@@ -1,16 +1,21 @@
 function loadPage(sectionId, file, className, callback) {
     let section = document.getElementById(sectionId);
 
-    // ✅ Apply class BEFORE loading content
-    section.classList.add(className);
+    // ✅ Apply background directly to the section
+    section.style.backgroundImage = "url('https://github.com/10-Andrei/ATM-prepaid-UI/blob/public/assets/images/wave/page-wave.svg')";
+    section.style.backgroundSize = "contain";
+    section.style.backgroundRepeat = "no-repeat";
+    section.style.backgroundPosition = "bottom";
 
     fetch(file)
         .then(response => response.text())
         .then(data => {
             section.innerHTML = data;
+            section.classList.add(className);
             if (callback) callback();
         });
 }
+
 
 
 // Load all pages and then adjust scrolling
