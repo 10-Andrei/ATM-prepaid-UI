@@ -1,13 +1,17 @@
 function loadPage(sectionId, file, className, callback) {
+    let section = document.getElementById(sectionId);
+
+    // ✅ Apply class BEFORE loading content
+    section.classList.add(className);
+
     fetch(file)
         .then(response => response.text())
         .then(data => {
-            let section = document.getElementById(sectionId);
             section.innerHTML = data;
-            section.classList.add(className);
             if (callback) callback();
         });
 }
+
 
 // Load all pages and then adjust scrolling
 let pagesLoaded = 0;
@@ -36,5 +40,4 @@ loadPage("Epins", "epins.html", "epins-section", checkAllPagesLoaded);
 loadPage("Topup", "topup.html", "topup-section", checkAllPagesLoaded);
 
 
-let section = document.getElementById(sectionId);
-section.classList.add(className); // Apply class BEFORE loading content
+
