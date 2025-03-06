@@ -9,8 +9,11 @@
     transform: scaleX(-1);
 }
 
-/* background-image: url('https://10-andrei.github.io/ATM-prepaid-UI/assets/images/wave/page-wave.svg');
- */
+
 section {
-    background-image: url('https://10-andrei.github.io/ATM-prepaid-UI/assets/images/wave/page-wave.svg');
+    
+background-image: url('ATM-prepaid-UI/assets/images/wave/page-wave.svg');
+
+    /* background-image: url('/assets/images/wave/page-wave.svg'); */
+
 }
