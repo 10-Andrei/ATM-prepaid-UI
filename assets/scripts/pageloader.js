@@ -34,3 +34,7 @@ loadPage("Telco", "telco.html", "telco-section", checkAllPagesLoaded);
 loadPage("Transpo", "transpo.html", "transpo-section", checkAllPagesLoaded);
 loadPage("Epins", "epins.html", "epins-section", checkAllPagesLoaded);
 loadPage("Topup", "topup.html", "topup-section", checkAllPagesLoaded);
+
+
+let section = document.getElementById(sectionId);
+section.classList.add(className); // Apply class BEFORE loading content
