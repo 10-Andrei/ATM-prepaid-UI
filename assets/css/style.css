@@ -573,65 +573,21 @@ body {
 /* ================= MEDIA QUERIES ================== */
 
 /* For Tablets (768px and below) */
-@media (max-width: 768px) {
-    .contact-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
 
-    .contact-left, .contact-right {
-        width: 100%;
-    }
 
-    .contact-left img {
-        width: 80%;
-        height: auto;
-        max-width: 450px;
-    }
+path {
+    fill: #73ccb03a;
+    /* fill: #73ccb0ab; */
 
-    .contact-form {
-        width: 90%;
-        max-width: 500px;
-    }
 }
 
-/* For Mobile Screens (480px and below) */
-@media (max-width: 480px) {
-    .contact-section {
-        padding: 0 5%;
-    }
-
-    .contact-left img {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    .contact-form {
-        width: 100%;
-        padding: 15px;
-    }
-
-    .input-field label {
-        font-size: 14px;
-    }
-
-    .input-field input,
-    .textarea-field textarea {
-        font-size: 14px;
-        padding: 8px;
-    }
-}
-
-
-svg {
+/* svg {
     display: block;
     width: 100%;
     height: auto;
-}
-
-
-
+    filter: drop-shadow(5px 12px 1px #73ccb0)
+    drop-shadow(5px 15px 1px #359e7d);
+} */
 
 h2 {
     font-size: 24px;
@@ -878,16 +834,7 @@ p {
 /* Second Page */
 
 /* Telco Load Section */
-.telco-section {
-    background-color: blue;
-    height: 100vh;
-    /* background-image: url('/assets/images/product/our-product-logo.png'); */
-    background-image: url('/wave.svg');
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-position: center;
-    border: 2px solid black;
-}
+
 
 .telco-title {
     font-family: var(--font-poppins);
@@ -903,6 +850,7 @@ p {
     margin: auto;    
     display: flex;
     justify-content: center;
+    transform: scaleX(-1);
 }
 
 .telco-container-img {

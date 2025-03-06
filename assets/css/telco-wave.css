@@ -1,0 +1,11 @@
+.telco-section {
+    background-color: white;
+    height: 100vh;
+    background-image: url('/assets/images/wave/page-wave.svg');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: bottom;
+    border: 2px solid black;
+    transform: scaleX(-1);
+}
+
