@@ -581,13 +581,13 @@ path {
 
 }
 
-/* svg {
+svg {
     display: block;
     width: 100%;
     height: auto;
     filter: drop-shadow(5px 12px 1px #73ccb0)
     drop-shadow(5px 15px 1px #359e7d);
-} */
+}
 
 h2 {
     font-size: 24px;
