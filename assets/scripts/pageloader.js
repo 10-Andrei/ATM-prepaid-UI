@@ -30,13 +30,13 @@ function checkAllPagesLoaded() {
     }
 }
 
-// loadPage("Telco", "telco.html", "telco-section", checkAllPagesLoaded);
-// loadPage("Transpo", "transpo.html", "transpo-section", checkAllPagesLoaded);
-// loadPage("Epins", "epins.html", "epins-section", checkAllPagesLoaded);
-// loadPage("Topup", "topup.html", "topup-section", checkAllPagesLoaded);
+loadPage("Telco", "telco.html", "telco-section", checkAllPagesLoaded);
+loadPage("Transpo", "transpo.html", "transpo-section", checkAllPagesLoaded);
+loadPage("Epins", "epins.html", "epins-section", checkAllPagesLoaded);
+loadPage("Topup", "topup.html", "topup-section", checkAllPagesLoaded);
 
-loadPage("Telco", "telco.html", checkAllPagesLoaded);
-loadPage("Transpo", "transpo.html", checkAllPagesLoaded);
-loadPage("Epins", "epins.html", checkAllPagesLoaded);
-loadPage("Topup", "topup.html", checkAllPagesLoaded);
+// loadPage("Telco", "telco.html", checkAllPagesLoaded);
+// loadPage("Transpo", "transpo.html", checkAllPagesLoaded);
+// loadPage("Epins", "epins.html", checkAllPagesLoaded);
+// loadPage("Topup", "topup.html", checkAllPagesLoaded);
 

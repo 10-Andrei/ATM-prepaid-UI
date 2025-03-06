@@ -1,9 +1,6 @@
 .telco-section {
     background-color: white;
     height: 100vh;
-    /* background-image: url('/assets/images/wave/page-wave.svg'); */
-    transform: scaleX(-1);
-    
     border: 2px solid black;  
 }
 
@@ -11,7 +8,6 @@ section {
     background-size: contain; 
     background-repeat: no-repeat;
     background-position: bottom;
-    background-image: url('/assets/images/wave/page-wave.svg');
-    margin: -20px;
-    
+    background-image: url('/assets/images/wave/page-wave.svg'); 
+    transform: scaleX(-1);   
 }

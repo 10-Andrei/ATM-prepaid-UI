@@ -847,11 +847,10 @@ p {
 
 .telco-container {
     background-color: var(--bg-main);
-    border: 1px solid black ;
-    margin: 50px auto;    
+    margin: auto;    
     display: flex;
     justify-content: center;
-    /* transform: scaleX(-1); */
+    transform: scaleX(-1);
 }
 
 .telco-container-img {
